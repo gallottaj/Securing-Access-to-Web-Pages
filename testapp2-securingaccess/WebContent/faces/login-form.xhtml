@@ -1,0 +1,29 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:body>
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<br/>
+	<ui:define name="content">
+
+	<!-- <h1>Test Form</h1>  -->
+
+	<!-- create a JSF form  -->
+<div align="center"> 
+	<form  method="post" action="j_security_check">
+		Username: <h:inputText id="j_username" autocomplete="off" /><br/>
+		Password: <h:inputSecret id="j_password" autocomplete="off" /><br/>
+		<h:commandButton type="submit" value="Submit" />
+	</form>
+</div>
+		
+	<!-- include ALL data validation messages -->
+	<h:messages/>
+	</h:form>
+	</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
